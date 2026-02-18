@@ -1,0 +1,26 @@
+{
+  "name": "employee-payroll-system-mini-project",
+  "version": "1.0.0",
+  "description": "Employee Payroll System Mini Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushsahu01/Employee_Payroll_System_BridgeLabz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ayushsahu01/Employee_Payroll_System_BridgeLabz/issues"
+  },
+  "homepage": "https://github.com/ayushsahu01/Employee_Payroll_System_BridgeLabz#readme",
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1"
+  }
+}
