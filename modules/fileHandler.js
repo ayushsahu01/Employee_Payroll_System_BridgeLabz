@@ -1,24 +1,23 @@
-const fs = require("fs").promises;
-const path = require("path");
+import fs from "fs"
 
-const filePath = path.join(__dirname, "../employees.json");
-
-async function read() {
-  try {
-    const data = await fs.readFile(filePath, "utf-8");
-    return JSON.parse(data || "[]");
-  } catch (err) {
-    console.error("Read Error:", err.message);
-    return [];
-  }
+const readFromFile = async () => {
+    try {
+        const data = await fs.promises.readFile("employees.json","utf-8")
+        return JSON.parse(data || "[]")
+    } catch (error) {
+        throw error
+    }
+    
 }
 
-async function write(data) {
-  try {
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
-  } catch (err) {
-    console.error("Write Error:", err.message);
-  }
+const writeToFile = async (data) => {
+    try {
+        await fs.promises.writeFile("employees.json", JSON.stringify(data, null, 2));
+        return true;
+    } catch (error) {
+        throw error;
+    }
+    
 }
 
-module.exports = { read, write };
+export {readFromFile, writeToFile}
